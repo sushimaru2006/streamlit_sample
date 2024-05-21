@@ -15,6 +15,7 @@ shutil.unpack_archive('download.zip')
 
 print("Download complete.")
 model = gensim.models.KeyedVectors.load_word2vec_format('model.vec', binary=False)
+print("Load complete.")
 
 @app.get("/word_merge/")
 async def merge_word(str1: str="", str2: str="", op: str="+"):
